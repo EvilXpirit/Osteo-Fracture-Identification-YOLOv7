@@ -174,7 +174,7 @@ st.sidebar.markdown("""
 4. Download the prediction or detection results using the download buttons.
 """)
 
-st.sidebar.markdown('<a href="http://localhost:5173/" style="text-decoration: none;"><button style="padding: 10px 20px; background-color: #f0f0f0; color: #333; border: none; cursor: pointer; border-radius: 5px;">Go Back to Home</button></a>', unsafe_allow_html=True)
+st.sidebar.markdown('<a href="https://osteo-fracture-identification.vercel.app" style="text-decoration: none;"><button style="padding: 10px 20px; background-color: #f0f0f0; color: #333; border: none; cursor: pointer; border-radius: 5px;">Go Back to Home</button></a>', unsafe_allow_html=True)
 
 
 # File uploader and processing logic
