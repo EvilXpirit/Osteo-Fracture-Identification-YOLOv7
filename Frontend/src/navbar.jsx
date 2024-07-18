@@ -22,7 +22,7 @@ function Header({ handleSectionChange }) {
                 Home
               </Link>
               {/* <Nav.Link onClick={() => handleSectionChange('home')}>Home</Nav.Link> */}
-              <Nav.Link href="http://localhost:8501/">Detect</Nav.Link>
+              <Nav.Link href="https://osteo-fracture-identification.streamlit.app/">Detect</Nav.Link>
               <Link
                 to="instructions"
                 spy={true}
