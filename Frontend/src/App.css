@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Courgette&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap');
+
+.App {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: 400;
+  font-style: normal;
+  /* background-color: #022c5a; */
+  /* background-image: linear-gradient(to right, #022c5a , #0185ff); */
+  background-image: linear-gradient(to bottom right, #022c5a , #0185ff);
+  color: white;
+}
+
+.navbar{
+  background-image: linear-gradient(to right, #022d5ab6 , #0185ff);
+}
+
+Navbar {
+  position: absolute;
+}
+ 
+ Navbar Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+Nav{
+font-size: 1.7rem;
+color: rgb(0, 0, 0);
+}
+
+footer{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  /* background-color: #0d00ff98; */
+  padding: 3rem 0 1rem 0;
+  margin-top: 2rem;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osteo Fracture Identification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://source.unsplash.com/random'); /* Replace with your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: #fff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        }
+        .image-upload {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .image-upload input[type="file"] {
+            display: none;
+        }
+        .image-preview {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Osteo Fracture Identification</h1>
+        <div class="image-upload">
+            <label for="fileInput" class="button" onclick="uploadFile()">Choose Image</label>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+        <div id="imagePreview" class="image-preview"></div>
+        <a id="downloadLink" class="button" style="display: none;" download>Download Prediction</a>
+    </div>
+
+    <script>
+function uploadFile() {
+    const fileInput = document.getElementById('fileInput');
+    const file = fileInput.files[0];
+    const formData = new FormData();
+    formData.append('file', file);
+
+    fetch('/predict', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.blob())
+    .then(blob => {
+        console.log('Received blob:', blob);
+        const url = URL.createObjectURL(blob);
+        console.log('Created URL:', url);
+        const imagePreview = document.getElementById('imagePreview');
+        imagePreview.innerHTML = '<img src="' + url + '" alt="Predicted Image" style="max-width: 100%; border-radius: 5px;">';
+        const downloadLink = document.getElementById('downloadLink');
+        downloadLink.href = url;
+        downloadLink.style.display = 'inline-block';
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+    </script>
+</body>
+</html>

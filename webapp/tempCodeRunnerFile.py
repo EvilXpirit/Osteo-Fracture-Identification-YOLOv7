@@ -1,0 +1,1 @@
+app = Flask(_name_)

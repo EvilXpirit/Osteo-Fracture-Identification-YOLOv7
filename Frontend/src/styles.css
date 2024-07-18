@@ -1,0 +1,68 @@
+.content .banner {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  /* padding: 90px 0; */
+  padding: 150px 0 90px 0;
+  color: white;
+  text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.305);
+  /* margin-top: 1rem; */
+}
+
+.title h1{
+  font-weight: 900;
+  font-size: 4rem;
+  text-shadow: 1px 1px 9px white;
+}
+ 
+.title .osteo-title{
+  font-size: 8rem;
+  padding-right: 16rem;
+}
+
+.title .fracture-title{
+  font-size: 6rem;
+  color: red;
+  padding-left: 5rem;
+}
+
+.title .identification-title{
+  font-size: 6rem;
+  padding-left: 3rem;
+}
+
+.bone-banner-img {
+  position: absolute;
+  top: 10.5rem;
+  right: -44rem;
+  transform: translate(50% 50%);
+}
+
+.bone-banner-img .bone-img{
+width: 28%;
+}
+
+.detect-button{
+  height: 4rem;
+  position: absolute;
+  top: -17rem;
+  right: 19rem;
+  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.451);
+}
+
+.patient img{
+  width: 50%;
+}
+
+/* .overlay{
+    background-Color: rgba(0, 0, 255, 0.267);
+    height: 64%;
+} */
+
+@media (max-width: 600px) {
+  .content .banner {
+    padding: 100px 0;
+    position: relative;
+  }
+
+}
