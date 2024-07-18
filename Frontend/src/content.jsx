@@ -200,7 +200,7 @@ const Content = () => {
                 type="button"
                 className="detect-button btn btn-danger btn-lg rounded-pill fw-bold fs-3"
                 onClick={() =>
-                  (window.location.href = "http://localhost:8501/")
+                  (window.location.href = "https://osteo-fracture-identification.streamlit.app")
                 }
               >
                 Detect Fracture
